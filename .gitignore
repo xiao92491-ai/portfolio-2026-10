@@ -1,0 +1,31 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Tool caches and local deployment metadata
+.cache/
+.vite/
+.turbo/
+.next/
+.nuxt/
+.output/
+.vercel/
+.wrangler/
+*.tsbuildinfo
+
+# Secrets and machine-specific environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and operating-system metadata
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Source and media assets are intentionally retained.

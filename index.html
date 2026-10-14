@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>羊羊羊 · 设计作品集</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23ffffff'/></svg>" />
+  </head>
+  <body>
+    <!-- Subtle dark grid background -->
+    <div class="background-grid" aria-hidden="true"></div>
+
+    <!-- Visual Shell Framing (Edge-anchored desktop scaffolding) -->
+    <div class="shell-layer">
+      <!-- Top-left Site Orb Mount -->
+      <div id="site-orb-mount"></div>
+
+      <!-- Top-center Spiral / List Toggle (Semantic buttons with pointer-events:auto) -->
+      <nav class="view-switch switch-hidden" aria-label="View switch">
+        <button id="switch-spiral" class="switch-btn active" type="button">spiral</button>
+        <span class="dot" aria-hidden="true">•</span>
+        <button id="switch-list" class="switch-btn inactive" type="button">list</button>
+      </nav>
+
+      <!-- Top-right Menu Mount -->
+      <div id="site-menu-mount"></div>
+
+      <!-- Bottom-left Showreel Mount -->
+      <div id="showreel-mount"></div>
+
+      <!-- Default silent; explicit user activation unlocks browser audio. -->
+      <button id="site-sound-button" class="sound-button is-muted" type="button" aria-label="Enable site sound" aria-pressed="false">
+        <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 9v6h4l5 4V5L8 9Z" fill="currentColor"/>
+          <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path class="sound-icon-waves" d="M16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14"/>
+            <path class="sound-icon-mute" d="m16 9 5 6m0-6-5 6"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Fullscreen WebGL2 Canvas Container -->
+    <canvas id="webgl-canvas" class="webgl"></canvas>
+
+    <!-- DOM Project Hover Pill Component Mount Point (Spiral Mode) -->
+    <div id="project-hover-mount"></div>
+
+    <!-- DOM Project List Component Mount Point (List Mode) -->
+    <div id="project-list-mount"></div>
+
+    <!-- DOM Intro Gate Component Mount Point -->
+    <div id="intro-gate-mount"></div>
+
+    <!-- DOM Project Detail Route Component Mount Point -->
+    <div id="project-detail-mount"></div>
+
+    <!-- DOM About Page Route Component Mount Point -->
+    <div id="about-page-mount"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
